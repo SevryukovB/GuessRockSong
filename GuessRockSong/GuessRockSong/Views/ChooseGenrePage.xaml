@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:GradientContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GuessRockSong.Controls; assembly:GradientContentPage"
+             x:Class="GuessRockSong.Views.ChooseGenrePage"
+             x:Name="MainLayout"    
+             ControlTemplate="{StaticResource MainPageTemplate}"
+             StartColor="#ff7960" EndColor="#d01969"
+             Title="Genres" >
+
+
+    <ContentPage.Content>
+        <StackLayout>
+                <ListView x:Name="ItemsListView"
+                      ItemsSource="{Binding GenresListAdditional}"
+                      VerticalOptions="FillAndExpand"
+                      HasUnevenRows="true"
+                      ItemTapped="OnItemTapped">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" RowSpacing="0" >
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="{Binding RowSize}"/>
+                                </Grid.RowDefinitions>
+                                <Image x:Name="guessRockText1"
+                                       Aspect="AspectFill"
+                                       VerticalOptions="FillAndExpand"
+                                       HorizontalOptions="FillAndExpand" 
+                                       Opacity="0.06"
+                                       Source="{Binding Image}"/>
+                                <Label x:Name="label"
+                                       Text="{Binding Name}"
+                                       LineBreakMode="NoWrap"
+                                       Style="{DynamicResource ListItemTextStyle}"
+                                       FontSize="32" 
+                                       TextColor="White"
+                                       FontFamily="Roboto-Light.ttf#Roboto-Light" VerticalOptions="Center" HorizontalOptions="Center"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+            </StackLayout>
+    </ContentPage.Content>
+</local:GradientContentPage>

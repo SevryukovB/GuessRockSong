@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:GradientContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GuessRockSong.Controls"
+             x:Class="GuessRockSong.Views.GamePage"
+             StartColor="#202837" EndColor="#181d29"
+             ControlTemplate="{StaticResource MainPageTemplate}">
+    <ContentPage.Content>
+        <AbsoluteLayout>
+        <Grid Padding="35, 20" RowSpacing="20" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30*"/>
+                    <ColumnDefinition Width="25*"/>
+                    <ColumnDefinition Width="40*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="80*"/>
+                    <RowDefinition Height="10*"/>
+                </Grid.RowDefinitions>
+                <Label Text="{Binding Path=TimerValue,  StringFormat='\{0\} sec'}"
+                   FontSize="20"
+                   Grid.Row="0"
+                   TextColor="{Binding TimerValueColor} "
+                   FontFamily="Roboto-Light.ttf#Roboto-Light"/>
+                <Label Text="{Binding Points}"
+                   FontSize="20"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   Margin="0"
+                   TextColor="#f93c6a"
+                   FontFamily="Roboto-Light.ttf#Roboto-Light"/>
+                <Label Text="{Binding Path=QuestionsCount, StringFormat='\{0\} / '}"
+                   FontSize="20"
+                   Grid.Row="0"
+                   Grid.Column="2"
+                   TextColor="White"
+                   Margin="0, 0, 0, 0"
+                   FontFamily="Roboto-Light.ttf#Roboto-Light"/>
+                <Label x:Name="TrueAnswersLabel"
+                   Text="{Binding TrueAnswers}"
+                   FontSize="20"
+                   Grid.Row="0"
+                   Grid.Column="2"
+                   TextColor="#f93c6a"
+                   Margin="40, 0, 0, 0"
+                   FontFamily="Roboto-Light.ttf#Roboto-Light"/>
+                <ListView x:Name="ItemsListView"
+                      ItemsSource="{Binding ItemsForDisplay}"
+                      VerticalOptions="FillAndExpand"
+                      HasUnevenRows="true"
+                      Grid.Row="1"
+                      Grid.Column="0"
+                      Grid.ColumnSpan="3">
+                <ListView.Behaviors>
+                    <local:ListViewSelectedItemBehavior></local:ListViewSelectedItemBehavior>
+                </ListView.Behaviors>
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Padding="0, 10" HeightRequest="50">
+                                <Label Text="{Binding BandName}"
+                                       FontSize="19"
+                                       TextColor="{Binding BandTextColor}"
+                                       FontFamily="Roboto-Light.ttf#Roboto-Light"/>
+                                <Label Text="{Binding SoundName}"
+                                       FontSize="15"
+                                       TextColor="{Binding SoundTextColor}"
+                                       FontFamily="Roboto-Light.ttf#Roboto-Light"/>
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+                <local:AdMobView AdUnitId="ca-app-pub-3940256099942544/6300978111" Grid.Row="2"/>
+            </Grid>
+            <local:ScoreView  Points="{Binding Points}" CustomVisible="{Binding ShowScore}" GenreId="{Binding GenreId}"/>
+        </AbsoluteLayout>
+    </ContentPage.Content>
+</local:GradientContentPage>

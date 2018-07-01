@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GuessRockSong.App">
+    <Application.Resources>
+
+        <!-- Application resource dictionary -->
+        <ResourceDictionary>
+            <ControlTemplate x:Key="MainPageTemplate">
+                <Grid VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ColumnSpacing="0" RowSpacing="0" BackgroundColor="Transparent">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="85"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <BoxView BackgroundColor="Transparent" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="5"/>
+                    <Button Image="arrow.png" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="1" BackgroundColor="Transparent" Command="{TemplateBinding BindingContext.GoBackCommand}"/>
+                    <Label Text="{TemplateBinding BindingContext.HeaderText}" FontSize="20" FontFamily="Roboto-Regular.ttf#Roboto-Regular" BackgroundColor="Transparent" TextColor="White" 
+                           VerticalOptions="Center" Grid.Column="1" Grid.Row="0" Grid.ColumnSpan="2"/>
+                    <ContentPresenter VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="5" BackgroundColor="Transparent"/>
+                </Grid>
+            </ControlTemplate>
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>

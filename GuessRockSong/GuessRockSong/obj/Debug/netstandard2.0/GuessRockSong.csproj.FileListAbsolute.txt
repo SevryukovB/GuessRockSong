@@ -1,0 +1,16 @@
+C:\Users\Bogdan\source\repos\GuessRockSong\GuessRockSong\GuessRockSong\bin\Debug\netstandard2.0\GuessRockSong.deps.json
+C:\Users\Bogdan\source\repos\GuessRockSong\GuessRockSong\GuessRockSong\bin\Debug\netstandard2.0\GuessRockSong.dll
+C:\Users\Bogdan\source\repos\GuessRockSong\GuessRockSong\GuessRockSong\bin\Debug\netstandard2.0\GuessRockSong.pdb
+C:\Users\Bogdan\source\repos\GuessRockSong\GuessRockSong\GuessRockSong\obj\Debug\netstandard2.0\GuessRockSong.csproj.CoreCompileInputs.cache
+C:\Users\Bogdan\source\repos\GuessRockSong\GuessRockSong\GuessRockSong\obj\Debug\netstandard2.0\GuessRockSong.App.xaml.g.cs
+C:\Users\Bogdan\source\repos\GuessRockSong\GuessRockSong\GuessRockSong\obj\Debug\netstandard2.0\GuessRockSong.MainPage.xaml.g.cs
+C:\Users\Bogdan\source\repos\GuessRockSong\GuessRockSong\GuessRockSong\obj\Debug\netstandard2.0\GuessRockSong.Views.ChooseGenrePage.xaml.g.cs
+C:\Users\Bogdan\source\repos\GuessRockSong\GuessRockSong\GuessRockSong\obj\Debug\netstandard2.0\GuessRockSong.Views.GamePage.xaml.g.cs
+C:\Users\Bogdan\source\repos\GuessRockSong\GuessRockSong\GuessRockSong\obj\Debug\netstandard2.0\GuessRockSong.Views.HomePage.xaml.g.cs
+C:\Users\Bogdan\source\repos\GuessRockSong\GuessRockSong\GuessRockSong\obj\Debug\netstandard2.0\GuessRockSong.Views.Page1.xaml.g.cs
+C:\Users\Bogdan\source\repos\GuessRockSong\GuessRockSong\GuessRockSong\obj\Debug\netstandard2.0\GuessRockSong.Views.RatingPage.xaml.g.cs
+C:\Users\Bogdan\source\repos\GuessRockSong\GuessRockSong\GuessRockSong\obj\Debug\netstandard2.0\GuessRockSong.AssemblyInfoInputs.cache
+C:\Users\Bogdan\source\repos\GuessRockSong\GuessRockSong\GuessRockSong\obj\Debug\netstandard2.0\GuessRockSong.AssemblyInfo.cs
+C:\Users\Bogdan\source\repos\GuessRockSong\GuessRockSong\GuessRockSong\obj\Debug\netstandard2.0\GuessRockSong.dll
+C:\Users\Bogdan\source\repos\GuessRockSong\GuessRockSong\GuessRockSong\obj\Debug\netstandard2.0\GuessRockSong.pdb
+C:\Users\Bogdan\source\repos\GuessRockSong\GuessRockSong\GuessRockSong\obj\Debug\netstandard2.0\GuessRockSong.csprojResolveAssemblyReference.cache

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:GradientContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:GuessRockSong.Controls; assembly:GradientContentPage"
+             x:Class="GuessRockSong.Views.RatingPage"
+             ControlTemplate="{StaticResource MainPageTemplate}"
+             StartColor="#ff1f2737" EndColor="#ff171d29"
+             Title="Raiting">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Your best results:"
+                   FontSize="30"
+                   TextColor="White"
+                   FontFamily="Roboto-Light.ttf#Roboto-Light"
+                   Margin="60, 0"
+                   HorizontalOptions="Center"/>
+            <ListView x:Name="Scores"
+                      ItemsSource="{Binding RatingList}"
+                      VerticalOptions="FillAndExpand"
+                      HasUnevenRows="true"
+                      IsEnabled="False" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid Margin="15, 10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="{Binding WidthSize}"/>
+                                    <ColumnDefinition Width="{Binding WidthSize}"/>
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="{Binding HeightSize}"/>
+                                </Grid.RowDefinitions>
+                                <Image Source="{Binding Image}"
+                                       Aspect="AspectFill"
+                                       VerticalOptions="FillAndExpand"
+                                       HorizontalOptions="FillAndExpand"/>
+                                <BoxView
+                                        Grid.Column="1"
+                                        VerticalOptions="FillAndExpand"
+                                        HorizontalOptions="FillAndExpand"
+                                        BackgroundColor="#232d3e"/>
+                                <Label 
+                                       Grid.Column="1"
+                                       Text="{Binding Score}"
+                                       FontSize="24"
+                                       TextColor="#f93c6a"
+                                       FontFamily="Roboto-Light.ttf#Roboto-Light"
+                                       HorizontalTextAlignment="Center"
+                                       VerticalTextAlignment="Center"/>
+                            </Grid>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</local:GradientContentPage>

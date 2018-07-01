@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<local:GradientContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+                           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                           xmlns:vm="clr-namespace:GuessRockSong.ViewModels"
+                           xmlns:local="clr-namespace:GuessRockSong.Controls; assembly=GuessRockSong"
+                           x:Class="GuessRockSong.Views.HomePage"
+                           x:Name="MainLayout"              
+                           StartColor="#ff1f2737" EndColor="#ff171d29">
+    `
+    <Grid x:Name="MainGrid" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="30*" />
+            <RowDefinition Height="16*" />
+            <RowDefinition Height="16*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="10*" />
+            <RowDefinition Height="8*" />
+        </Grid.RowDefinitions>
+
+        <Image x:Name="GuitarLogo" 
+               Grid.Row="0" 
+               Source="electric_guitar.png" />
+
+        <Image x:Name="GuessRockText" 
+               Grid.Row="1" 
+               Source="Guess_rock_song.png" />
+
+        <Image x:Name="WaveImg" 
+               Grid.Row="2" 
+               Source="wave.png" />
+
+        <!--Brutal hack for use image + text in 1 button-->
+        <Button x:Name="StartGameBtn" 
+               Grid.Row="3"
+               Image="Start.png" BackgroundColor="Transparent" Command="{Binding OpenGenresCommand}"/>
+        <Button x:Name="StartGameBtn2" 
+                Command="{Binding OpenGenresCommand}"
+                Text="Start"
+                TextColor="White"
+                FontFamily="Roboto-Light.ttf#Roboto-Thin"
+                FontSize="Large"
+                Grid.Row="3"
+                BackgroundColor="Transparent"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+
+        <Button x:Name="RatingBtn" 
+                Grid.Row="4" 
+                Image="Rating.png"
+                BackgroundColor="Transparent" 
+                Command="{Binding OpenRaitingCommand}" />
+        <Button x:Name="RatingBtn2" 
+                Command="{Binding OpenRaitingCommand}"
+                Text="Rating"
+                TextColor="White"
+                FontFamily="Roboto-Light.ttf#Roboto-Thin"
+                FontSize="Large"
+                Grid.Row="4"
+                BackgroundColor="Transparent" 
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+
+
+        <Button x:Name="RateAppBtn" 
+               Grid.Row="5" 
+               Image="RateApp.png" BackgroundColor="Transparent"/>
+        <Label 
+               Text="Rate app"
+               TextColor="White"
+               FontFamily="Roboto-Light.ttf#Roboto-Thin"
+               FontSize="Large"
+               Grid.Row="5"
+               HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+        <local:AdMobView AdUnitId="ca-app-pub-2982635626402476/8161727562" Grid.Row="6"/>
+
+    </Grid>
+</local:GradientContentPage>
